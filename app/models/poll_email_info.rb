@@ -37,6 +37,8 @@ class PollEmailInfo
   def formatted_date_for(date_string)
     date = date_string.to_date
     date.strftime(date.year == Date.today.year ? "%e %b" : "%e %b %Y")
+  rescue
+    date_string
   end
 
   def outcome
